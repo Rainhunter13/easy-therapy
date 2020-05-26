@@ -1,3 +1,31 @@
-h1 {
-    color: red;
+/*body*/
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*menu bar*/
+.menu {
+    background-color: #43a5fc;
+    overflow: hidden;
+}
+
+/*links inside the menu bar */
+.menuLink {
+float: left;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 18px;
+}
+
+.menuLink:hover {
+background-color: #edfaff;
+color: black;
+}
+
+#active {
+background-color: #9ee2ff;
+color: white;
 }

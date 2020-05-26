@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <title>Home</title>
 
-    <link href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
     <link href="./home.css" rel="stylesheet" />
 
@@ -14,11 +15,24 @@
 
 <body>
 
-    <h1 id="testText"> HOME... </h1>
+    <!--FIREBASE IMPORT-->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
 
+    <!--JAVASCRIPT IMPORT-->
     <script src="jquery/js/jquery-1.9.0.min.js"></script>
     <script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
     <script src="./home.js"></script>
+
+
+    <!--menu bar-->
+    <div class="menu">
+      <a class="menuLink" href="home.html">Home</a>
+      <a class="menuLink" id = "active" href="register.html">Register</a>
+      <a class="menuLink" href="appointments.html">My Appointments</a>
+      <a class="menuLink" href="share.html">Share Experience</a>
+    </div>
+
 
 </body>
 
