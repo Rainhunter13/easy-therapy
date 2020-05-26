@@ -13,14 +13,19 @@ var db = firebase.firestore();
 
 $( document ).ready( function() {
 
+  // FIREBASE TEST
   var ref = db.collection("users").doc("test");
   ref.get().then(function (doc) {
     data = doc.data();
     for (key in data) {
       console.log(key);
     }
-  })
+  });
 
-
+  // SEARCH BY FILTERS
+  var search_icon = document.getElementById("search_icon");
+  search_icon.onclick = function () {
+    alert("works");
+  };
 
 });
