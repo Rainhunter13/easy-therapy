@@ -1,7 +1,14 @@
 /*body*/
 body {
-    margin: 0;
+    margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+}
+
+.side .md blockquote {
+    color: #000;
+    font-size: 13px;
+    overflow-x: hidden;
 }
 
 /*menu bar*/
@@ -34,23 +41,39 @@ body {
 .filter {
     position: relative;
     top: 20px;
-    left: 20px;
-    background-color: lightskyblue;
+    left: 10px;
     color: black;
-    padding: 5px 5px;
-    border: 2px solid steelblue;
+    padding: 2px 5px;
+    background-color: lightcyan;
+    border: 2px solid lightsteelblue;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 25px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24),0 5px 10px 0 rgba(0,0,0,0.19);
+}
+
+/*search input*/
+.search_input {
+    position: relative;
+    top: 20px;
+    right: 5px;
+    width: 500px;
+    padding: 2px 5px;
+    float: right;
+    cursor: text;
+    font-size: 25px;
+    border-radius: 2px;
+    border: 2px solid lightsteelblue;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24),0 5px 10px 0 rgba(0,0,0,0.19);
 }
 
 /*search icon*/
 .icon {
+    padding-right: 10px;
     position: relative;
-    top: 32.5px;
-    left: 25px;
-    height: 45px;
-    width: 45px;
+    top: 23px;
+    height: 30px;
+    width: 30px;
     cursor: pointer;
+    border: 5px red;
 }
