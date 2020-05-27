@@ -14,7 +14,7 @@ var db = firebase.firestore();
 $( document ).ready( function() {
 
   // FIREBASE TEST
-  var ref = db.collection("users").doc("test");
+  var ref = db.collection("users").doc("test")
   ref.get().then(function (doc) {
     data = doc.data();
     for (key in data) {
@@ -27,5 +27,26 @@ $( document ).ready( function() {
   search_icon.onclick = function () {
     alert("works");
   };
+
+  // RATING FILTER CONTROL (STARS SIZE IS A BULL SHIT)
+  var rating = document.getElementById("rating");
+  var r5 = document.getElementById("5stars");
+  var r4 = document.getElementById("4stars");
+  var r3 = document.getElementById("3stars");
+  var r2 = document.getElementById("2stars");
+  var r1 = document.getElementById("r1");
+  $(rating).change(function () {
+    if (r5.selected || r4.selected || r3.selected || r2.selected) {
+      rating.style.paddingBottom = "7.5px";
+      rating.style.fontSize = "20px";
+      rating.style.width = "167.5px";
+    }
+    if (r1.selected) {
+      rating.style.paddingBottom = "2px";
+      rating.style.fontSize = "25px";
+    }
+  });
+
+
 
 });

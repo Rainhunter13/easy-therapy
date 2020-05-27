@@ -52,6 +52,15 @@ body {
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24),0 5px 10px 0 rgba(0,0,0,0.19);
 }
 
+.options {
+    color: darkgray;
+    font-size: 20px;
+}
+
+#rating {
+    vertical-align: top;
+}
+
 /*search input*/
 .search_input {
     position: relative;
@@ -61,10 +70,15 @@ body {
     padding: 2px 5px;
     float: right;
     cursor: text;
+    font-style: italic;
     font-size: 25px;
     border-radius: 2px;
     border: 2px solid lightsteelblue;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24),0 5px 10px 0 rgba(0,0,0,0.19);
+}
+
+::placeholder {
+    color: lightgray;
 }
 
 /*search icon*/
@@ -76,4 +90,13 @@ body {
     width: 30px;
     cursor: pointer;
     border: 5px red;
+}
+
+/*note text*/
+.note {
+    position: relative;
+    left: 15px;
+    top: 25px;
+    font-size: 15px;
+    color: gray;
 }
