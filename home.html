@@ -30,11 +30,14 @@
       <a class="menuLink" href="register.html">Register</a>
       <a class="menuLink" href="appointments.html">My Appointments</a>
       <a class="menuLink" href="share.html">Share Experience</a>
+      <div align="right">
+        <a class="profile" href="profile.html">My Profile</a>
+      </div>
+      <div align="right">
+        <img src="profile-icon.png" alt="avatar" width="27px" height="25px" href="profile.html"
+             style="position: relative; right: 5px; top: -10px; font-size: 25px; background-color: transparent">
+      </div>
     </div>
-
-    <!--page title-->
-<!--    <b class="title"> Therapy Search</b>-->
-<!--    <br><br>-->
 
     <!--filters-->
     <select class="filter" id="specialize" name="specialize">
@@ -74,22 +77,28 @@
 
     <!--filters note-->
     <br>
-    <a class="note">*filter changes are applied automatically</a>
+    <a class="note">*filters changes are applied automatically</a>
 
     <!--MAP-->
     <br><br>
     <div>
-      <iframe class="map"
+      <iframe align="right" class="map"
         id = "map"
         width = "1000px"
         height = "550px"
         src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyC8Kum3xeygioNie-92TSmXe7meVU7Ibho
-        &q=KAIST&maptype=roadmap&language=en&zoom=12"
+        &q=Daejeon&maptype=roadmap&language=en&zoom=13"
         allowfullscreen>
       </iframe>
     </div>
 
+<!--results found text-->
+    <br>
+    <a class="results">134 results found in Daejeon</a>
 
+<!--change city info icon + description-->
+    <i id="info" class="fas fa-info-circle"></i>
+    <button id="changeCity" class="changeCity">In order to change the city adjust you profile information</button>
 
 </body>
 

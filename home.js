@@ -47,6 +47,20 @@ $( document ).ready( function() {
     }
   });
 
-
+  // CHANGE CITY INFO ICON
+  var info = document.getElementById("info");
+  var changeCity = document.getElementById("changeCity");
+  $(info).hover(
+    function () {
+      $(info).addClass("on");
+      setTimeout(() => {
+        if ($(info).hasClass("on")) changeCity.style.display = "block";
+      }, 500);
+    },
+    function () {
+      $(info).removeClass("on");
+      changeCity.style.display = "none";
+    }
+  )
 
 });
