@@ -1,0 +1,228 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+.menu {
+    background-color: #43a5fc;
+    overflow: hidden;
+
+  }
+  
+  /* Style the links inside the navigation bar */
+  .menuLink {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  /* Change the color of links on hover */
+  .menuLink:hover {
+    background-color: #edfaff;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  #active {
+    background-color: #9ee2ff;
+    color: white;
+  }
+  .collapsible {
+    background-color: #43a5fc;
+    color: white;
+    cursor: pointer;
+    padding: 20px;
+    width: 90%;
+    border: 3px;
+    border-radius: 12px;
+     border-color: white; 
+     border-style: solid; 
+     display: block;
+    margin-left: 20px;
+  
+    
+    text-align: center;
+    outline: none;
+    font-size: 20px;
+  }
+  .collapsib {
+    background-color: #43a5fc;
+    color: white;
+    cursor: pointer;
+    padding: 20px;
+    width: 90%;
+    border: 3px;
+    border-radius: 12px;
+     border-color: white; 
+     border-style: solid; 
+     display: block;
+    margin-left: 20px;
+  
+    
+    text-align: center;
+    outline: none;
+    font-size: 20px;
+  }
+  .collaps {
+    background-color:white;
+    color:blue;
+    cursor: pointer;
+
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #A9A9A9;
+  }
+ 
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: white;
+  }
+  .title{
+  margin-left: 30%;
+  }
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+
+
+.left{
+   width:300px;
+   margin-top: 20%;
+} 
+.right{
+  width:900px;
+}
+.panel{
+width:500px;
+height:227.5px;
+border:2px;
+border-color: black; 
+border-style: solid; 
+margin-left:20%;
+text-align: left;
+text-indent: 1.5em;
+    outline: none;
+    font-size: 15px;
+    margin-top:5%;
+    box-shadow: 5px 10px gainsboro;
+}
+.stars input {
+  position: absolute;
+  left: -999999px;
+}
+
+.stars a {
+  display: inline-block;
+  padding-right:4px;
+  text-decoration: none;
+  margin:0;
+}
+
+.stars a:after {
+  position: relative;
+  font-size: 18px;
+  font-family: 'FontAwesome', serif;
+  display: block;
+  content: "\f005";
+  color: #9e9e9e;
+}
+
+
+span {
+font-size: 0; /* trick to remove inline-element's margin */
+}
+
+.stars a:hover ~ a:after{
+color: #9e9e9e !important;
+}
+span.active a.active ~ a:after{
+color: #9e9e9e;
+}
+
+span:hover a:after{
+color:gold !important;
+}
+
+span.active a:after,
+.stars a.active:after{
+color:gold;
+}
+.ago{
+  margin-top:10%;
+  text-align: right;
+  font-size: 10px;
+  font-style: initial;
+  color: grey;
+}
+
+
+.not{
+  margin-left:23%;
+  width:500px;
+  text-align: left;
+  padding: 10px;
+  border: 1px solid lightgray;
+  box-shadow: 5px 10px whitesmoke;
+}
+.card{
+  border: 2px solid black;
+
+}
+.deleteDep{
+  background-color: #43a5fc;
+    color: white;
+    border-radius: 12px;
+    border: 3px;
+     border-color: white; 
+     border-style: solid; 
+     display: block;
+}
+#search{
+  background-color: #43a5fc;
+    color: white;
+    border-radius: 12px;
+    border: 3px;
+     border-color: white; 
+     border-style: solid; 
+     display: block;
+}
+#notify{
+  background-color: #43a5fc;
+    color: white;
+    border-radius: 12px;
+    border: 3px;
+     border-color: white; 
+     border-style: solid; 
+     display: block;
+}
+.indent{
+  text-indent: 1.5em;
+}
+.btn {
+  padding:5px;
+  width:90px;
+  height:32px;
+  text-align: inherit;
+}
+.text{
+  text-align: right;
+}
+.checked {
+  color: orange;
+}
+.zhuldyz{
+  margin-left:35%
+}
