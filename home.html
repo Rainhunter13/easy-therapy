@@ -32,6 +32,10 @@
       <a class="menuLink" href="share.html">Share Experience</a>
     </div>
 
+    <!--page title-->
+<!--    <b class="title"> Therapy Search</b>-->
+<!--    <br><br>-->
+
     <!--filters-->
     <select class="filter" id="specialize" name="specialize">
         <option class="options">Specialization</option>
@@ -42,7 +46,7 @@
     </select>
 
     <select class="filter" id="price" name="price">
-        <option class="options">Maximum Price</option>
+        <option class="options">Max. Price</option>
         <option class="options">25$ per hour</option>
         <option class="options">50$ per hour</option>
         <option class="options">75$ per hour</option>
@@ -57,8 +61,8 @@
     </select>
 
     <select class="filter" style="font-size: 25px" id="rating" name="rating">
-        <option class="options" id="r1">Rating</option>
-        <option class="options" id="5stars" name="radio">&#9733; &#9733; &#9733; &#9733; &#9733;</option>
+        <option class="options" id="r1">Min. Rating</option>
+        <option class="options" id="5stars" name="radio">&starf; &starf; &starf; &starf; &starf;</option>
         <option class="options" id="4stars" name="radio">&starf; &starf; &starf; &starf;</option>
         <option class="options" id="3stars" name="radio">&starf; &starf; &starf;</option>
         <option class="options" id="2stars" name="radio">&starf; &starf;</option>
@@ -72,7 +76,18 @@
     <br>
     <a class="note">*filter changes are applied automatically</a>
 
-
+    <!--MAP-->
+    <br><br>
+    <div>
+      <iframe class="map"
+        id = "map"
+        width = "1000px"
+        height = "550px"
+        src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyC8Kum3xeygioNie-92TSmXe7meVU7Ibho
+        &q=KAIST&maptype=roadmap&language=en&zoom=12"
+        allowfullscreen>
+      </iframe>
+    </div>
 
 
 

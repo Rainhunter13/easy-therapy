@@ -37,6 +37,14 @@ body {
     color: white;
 }
 
+/*page title*/
+.title {
+    position: relative;
+    top: 20px;
+    left: 50px;
+    font-size: 50px;
+}
+
 /*filters*/
 .filter {
     position: relative;
@@ -46,14 +54,14 @@ body {
     padding: 2px 5px;
     background-color: lightcyan;
     border: 2px solid lightsteelblue;
-    border-radius: 5px;
     cursor: pointer;
     font-size: 25px;
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24),0 5px 10px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24), 0 5px 10px 0 rgba(0,0,0,0.19);
 }
 
 .options {
     color: darkgray;
+    background-color: lightcyan;
     font-size: 20px;
 }
 
@@ -67,18 +75,18 @@ body {
     top: 20px;
     right: 5px;
     width: 500px;
-    padding: 2px 5px;
+    padding: 2.5px 5px;
     float: right;
     cursor: text;
-    font-style: italic;
     font-size: 25px;
-    border-radius: 2px;
+    border-radius: 3px;
     border: 2px solid lightsteelblue;
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24),0 5px 10px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24), 0 5px 10px 0 rgba(0,0,0,0.19);
 }
 
 ::placeholder {
     color: lightgray;
+    font-style: italic;
 }
 
 /*search icon*/
@@ -99,4 +107,13 @@ body {
     top: 25px;
     font-size: 15px;
     color: gray;
+}
+
+/*map*/
+.map {
+    position: relative;
+    top: 20px;
+    left: 10px;
+    border: 3px solid lightsteelblue;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24), 0 5px 10px 0 rgba(0,0,0,0.19);
 }
