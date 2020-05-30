@@ -4,6 +4,19 @@ body {
   }
 
 
+  .column {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
 .menu {
     background-color: #43a5fc;
     overflow: hidden;
@@ -31,3 +44,174 @@ body {
     background-color: #9ee2ff;
     color: white;
   }
+
+
+  #right_side{
+    margin-top: 12px;
+    margin-right: 20px;
+    
+  }
+
+  #register_table{
+    width:100%;
+    border-collapse: separate;
+  }
+
+
+
+  #register_table td{
+    width: 12.5%;
+    height: 50px;
+    text-align: center;
+  }
+
+  .occupied {
+    background-color: rgba(255, 101, 101, 0.87); 
+    /* border-right: 3px solid white; */
+    /* border-left: 3px solid white; */
+    /* border: 1px solid white; */
+  }
+
+  .yourapt {
+    background-color: #43a5fc; 
+    /* border-left:3px solid white; */
+    /* border-right: 3px solid white; */
+    /* border: 1px solid white; */
+  }
+
+  .free {
+    cursor: pointer;
+  }
+
+  .free:hover {
+    border: 3px dotted black !important;
+  }
+
+  #post_button:hover{
+    cursor: pointer;
+  }
+
+  .fa-chevron-left:hover {
+    color: orange !important;
+    cursor: pointer;
+  }
+  
+  .fa-chevron-right:hover {
+    color: orange !important;
+    cursor: pointer;
+  }
+
+  .darkrow {
+    background-color: #c3c3c3;
+  }
+
+  .lightrow {
+    background-color: #f4f4f4;
+  }
+
+  #therapist_info{
+    width: 45%;
+    background-color: #f4f4f4;
+    box-shadow: 3px 4px 3px #bcbbbb;
+    margin-left: 15px;
+    margin-top: 12px;
+    overflow: hidden;
+  }
+
+  #karen{
+    box-shadow: 2px 3px 3px #bcbbbb;
+    border: 2px solid white;
+  }
+
+  #therapist_top{
+    margin-top: 5px; 
+    margin-left: 35px;
+    overflow: hidden;
+  }
+
+  #therapist_heading{
+    display: block;
+    font-size: 1.5em;
+    margin-top: 1.0em;
+    margin-bottom: 0.67em;
+    margin-left: 1.0em;
+    float: left;
+    line-height: 1.2;
+    color: #4d4d4d;
+    overflow: hidden;
+  }
+
+  .checked {
+    color: orange;
+  }
+
+
+
+  #rating{
+    margin-left: 65px;
+    overflow: hidden;
+  }
+
+  #detail_info{
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 15px;
+    border-bottom: 1px solid lightgray !important;
+    border-top: 1px solid lightgray !important;
+  }
+
+  #detail_info p{
+    color: #4d4d4d;
+    font-size: 1.4em;
+  }
+
+  #detail_info span{
+    padding-right: 0.5em;
+  }
+
+  #comments {
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: white !important;
+  }
+
+  #your_comment {
+    border-bottom: 1px solid lightgray !important;
+  }
+
+  #your_comment textarea{
+    width: auto; 
+    margin-left: 1em; 
+    resize: none;
+    width: 95%;
+    margin-top: 1em;
+    -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
+       -moz-box-sizing: border-box; /* FF1+ */
+            box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
+  }
+
+  #post_button {
+    background-color: #43a5fc; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 1.1em;
+  }
+
+  .avatar {
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float:left; 
+    margin-bottom: 1em; 
+    margin-left: 0.6em;
+  }
+
+ 
+  

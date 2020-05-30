@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <title>Register for an appointment</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
-<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
 <link href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />  
 <link href="./register.css" rel="stylesheet" />
 
@@ -23,18 +24,202 @@
     </div>
   
 
+<div class = "row">
+
+    <div id = "therapist_info" class = "column">  
+     
+
+      <div id = "therapist_top"> 
+       <p style ="float: left;"><img id="karen" src="karen.jpg" width="250" height ="150"></p>
+       <h1 id= "therapist_heading">  Karen Johnson, 37  <br> 
+       <span style = "color: #848484; font-size: 0.6em;"> Family Therapist </span> <br> 
+       <span style = "color: #848484; font-size: 0.6em;"> Gung-Dong </span> 
+        <span style = "color: #848484; font-size: 0.6em;">(2 km away)</span> 
+      </h1>
+     </div>
+     
+     <div id = "rating">
+     <span class="fa fa-star checked"></span>
+     <span class="fa fa-star checked"></span>
+     <span class="fa fa-star checked"></span>
+     <span class="fa fa-star"></span>
+     <span class="fa fa-star"></span>  
+     <span style ="color: #4d4d4d; font-family: Arial, Helvetica, sans-serif; font-size: 1em; margin-left: 5px;">228 rates</span>
+    </div>
 
 
-    <div id = "therapist_info">  
+    <div id = "detail_info">
+      <p><span class="fas fa-comment-medical"></span> Couple and marriage counseling, relationship advice, stress and anxiety
+        related therapy <br> </p> 
+      <p><span class="fas fa-graduation-cap"> </span> Master's of Psychological Sciences <br></p>
+      <p><span class="fas fa-briefcase"> </span> Up to 3,000 hours of supervised clinical experience <br></p>
+      <p><span class="far fa-id-badge"> </span> Licensed through state approved exam <br></p>
+      <p><span class="fas fa-money-bill-alt"> </span> $55-$75 per hour </p>
+    </div>
+
+
+
+    <h3 style = "margin-left: 1em; margin-right: 1em; color: #4d4d4d;">Comments (1)
+      <span class="fas fa-sort-down" style="cursor: pointer;"></span></h3>
+      
+    <table id = "comments">
+    
+      <tr id = "your_comment">
+        <td><img src = "user_avatar.png" class = "avatar" style ="margin-top: 0.5em;"></td>
+        <td><textarea placeholder="Your comment here..."></textarea>
+          <button type = "button" id ="post_button">Post</button>
+        </td>
+      </tr>  
+
+
+      <tr>
+        <td> <img src = "avatar.png" class = "avatar"> 
+          </td>
+        <td id = "kyles_comment" style = "width: 100%;"> <p style="margin-left: 1em; line-height: 0.5em;">Kyle777 <span style="color: gray;">(2 weeks ago)</span></p>
+          <p style = "margin-left: 1em; font-size: 0.8em;"> 
+            Recently visited with my wife, Karen really helped us out. I finally got divorced, hooray!</p> 
+          
+        </td>
+      </tr>
+
+      </table>
+
+  
+
+
 
     </div>
 
 
 
-  <div id = "register_table">
+  <div id = "right_side" class ="column" style ="float: right;">
+
+    <h1 style ="text-align: center; color: #4d4d4d;">Schedule</h1>
+
+    <span class="fas fa-chevron-left" style = "font-size: 1.5em; padding-bottom: 0.5em; color: #4d4d4d;"></span>
+    <span class="fas fa-chevron-right" style = "font-size: 1.5em; color: #4d4d4d;"></span>
+
+    <table id="register_table">
+        <tr style="border-bottom: 0px;">
+          <th></th>
+          <th>8</th>
+          <th>9</th>
+          <th>10</th>
+          <th>11</th>
+          <th>12</th>
+          <th>13</th>
+          <th>14</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            Mon
+          </td>
+          <td>
+            Tue
+          </td>
+          <td> 
+            Wed
+          </td>
+          <td>
+            Thur
+          </td>
+          <td>
+            Fri
+          </td>
+          <td>
+            Sat
+          </td>
+          <td>
+            Sun
+          </td>
+        </tr>
     
+        <tr class="darkrow">
+          <td class="hour"><span>9:00</span></td>
+          <td rowspan="3" class="occupied"> Occupied </td>
+          <td class="free"></td>
+          <td class="occupied">Occupied</td>
+          <td class="free"></td>
+          <td class="free"></td>
+          <td class="occupied" rowspan="3">Occupied</td>
+          <td class="occupied" rowspan="3">Occupied</td>
+        </tr>
+      
+        <tr class="lightrow">
+          <td class="hour"><span>10:00</span></td>
+
+          
+          
+          <td class="free"></td>
+          <td class="free"></td>
+          <td class="free"></td>
+          <td class="free"></td>
+        </tr>
+        
+        
+        <tr class="darkrow">
+          <td class="hour"><span>11:00</span></td>
+
+          
+          
+          <td class="free"></td>
+          <td class="free"></td>
+          <td class="free"></td>
+          <td class="free"></td>
+        </tr>
+        
+        <tr style="border: 1px solid grey;">
+          <td class="hour"><span>12:00</span></td>
+          <td colspan="7">Lunch Break</td>
+        </tr>
+        
+        <tr class="darkrow">
+          <td class="hour"><span>13:00</span></td>
+          <td class="yourapt">Your appointment</td>
+          <td rowspan="2" class="occupied">Occupied</td>
+          <td class="free"></td>
+          <td class="occupied" rowspan="4">Occupied</td>
+          <td class="occupied">Occupied</td>
+          <td class="free"></td>
+          <td class="free"></td>
+        </tr>
+        
+        <tr class="lightrow">
+          <td class="hour"><span>14:00</span></td>
+          
+          <td class="free"></td>
+          <td class="free"></td>
+          <td class="free"></td>
+          <td class="free"></td>
+          <td class="free"></td>
+        </tr>
+        
+        <tr class="darkrow">
+          <td class="hour"><span>15:00</span></td>
+          <td class ="occupied">Occupied</td>
+          
+          <td class="free"></td>
+          <td class="free"></td>
+          <td class="free"></td>
+          <td class="free"></td>
+          <td class="free"></td>
+        </tr>
+        
+        <tr class="lightrow">
+          <td class="hour"><span>16:00</span></td>
+          
+          <td class="free"></td>
+          <td class="free"></td>
+          <td class="free"></td>
+          <td class="free"></td>
+          <td class="free"></td>
+          <td class="free"></td>
+        </tr>
+    </table>
   </div>
 
+</div>
 
 
 
@@ -42,7 +227,12 @@
 
 
 
-
+<script>
+  function showPopup() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
 
 
 
@@ -73,9 +263,7 @@
 <!-- LINKS TO FIREBASE AND JQUERY HERE -->
     <script src="jquery/js/jquery-1.9.0.min.js"></script>
     <script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
-    <script src="./country_capital_pairs.js"></script>
-    <script src="./capital_game.js"></script>
-
+    <script src="./register.js"></script>
  <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
 
