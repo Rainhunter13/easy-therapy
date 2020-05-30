@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <title>Home</title>
 
-    <link href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
     <link href="./home.css" rel="stylesheet" />
 
@@ -14,11 +15,90 @@
 
 <body>
 
-    <h1 id="testText"> HOME... </h1>
+    <!--FIREBASE IMPORT-->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
 
+    <!--JAVASCRIPT IMPORT-->
     <script src="jquery/js/jquery-1.9.0.min.js"></script>
     <script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
     <script src="./home.js"></script>
+
+    <!--menu bar-->
+    <div class="menu">
+      <a class="menuLink" id = "active" href="home.html">Home</a>
+      <a class="menuLink" href="register.html">Register</a>
+      <a class="menuLink" href="appointments.html">My Appointments</a>
+      <a class="menuLink" href="share.html">Share Experience</a>
+      <div align="right">
+        <a class="profile" href="profile.html">My Profile</a>
+      </div>
+      <div align="right">
+        <img src="profile-icon.png" alt="avatar" width="27px" height="25px" href="profile.html"
+             style="position: relative; right: 5px; top: -10px; font-size: 25px; background-color: transparent">
+      </div>
+    </div>
+
+    <!--filters-->
+    <select class="filter" id="specialize" name="specialize">
+        <option class="options">Specialization</option>
+        <option class="options">Family Therapy</option>
+        <option class="options">Children Therapy</option>
+        <option class="options">Stress and Anxiety</option>
+        <option class="options">Career</option>
+    </select>
+
+    <select class="filter" id="price" name="price">
+        <option class="options">Max. Price</option>
+        <option class="options">25$ per hour</option>
+        <option class="options">50$ per hour</option>
+        <option class="options">75$ per hour</option>
+        <option class="options">100$ per hour</option>
+    </select>
+
+    <select class="filter" id="age" name="age">
+        <option class="options">Age</option>
+        <option class="options"> 18-30 years old</option>
+        <option class="options"> 30-50 years old</option>
+        <option class="options"> >50 years old</option>
+    </select>
+
+    <select class="filter" style="font-size: 25px" id="rating" name="rating">
+        <option class="options" id="r1">Min. Rating</option>
+        <option class="options" id="5stars" name="radio">&starf; &starf; &starf; &starf; &starf;</option>
+        <option class="options" id="4stars" name="radio">&starf; &starf; &starf; &starf;</option>
+        <option class="options" id="3stars" name="radio">&starf; &starf; &starf;</option>
+        <option class="options" id="2stars" name="radio">&starf; &starf;</option>
+    </select>
+
+    <!--search input and icon-->
+    <img src="search-icon.png" id="search_icon" class="icon" alt="search" align="right">
+    <label><input id="search_input" class="search_input" placeholder="Type the name of the therapist... (optional)"></label>
+
+    <!--filters note-->
+    <br>
+    <a class="note">*filters changes are applied automatically</a>
+
+    <!--MAP-->
+    <br><br>
+    <div>
+      <iframe align="right" class="map"
+        id = "map"
+        width = "1000px"
+        height = "550px"
+        src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyC8Kum3xeygioNie-92TSmXe7meVU7Ibho
+        &q=Daejeon&maptype=roadmap&language=en&zoom=13"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+<!--results found text-->
+    <br>
+    <a class="results">134 results found in Daejeon</a>
+
+<!--change city info icon + description-->
+    <i id="info" class="fas fa-info-circle"></i>
+    <button id="changeCity" class="changeCity">In order to change the city adjust you profile information</button>
 
 </body>
 

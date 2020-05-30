@@ -1,3 +1,160 @@
-h1 {
-    color: red;
+/*body*/
+body {
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+}
+
+.side .md blockquote {
+    color: #000;
+    font-size: 13px;
+    overflow-x: hidden;
+}
+
+/*menu bar*/
+.menu {
+    background-color: #43a5fc;
+    overflow: hidden;
+}
+
+/*links inside the menu bar */
+.menuLink {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menuLink:hover {
+    background-color: #edfaff;
+    color: black;
+}
+
+#active {
+    background-color: #9ee2ff;
+    color: white;
+}
+
+/*profile icon*/
+.profile {
+    position: relative;
+    top: 15px;
+    right: 25px;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/*page title*/
+.title {
+    position: relative;
+    top: 20px;
+    left: 50px;
+    font-size: 50px;
+}
+
+/*filters*/
+.filter {
+    position: relative;
+    top: 20px;
+    left: 10px;
+    color: black;
+    padding: 2px 5px;
+    background-color: lightcyan;
+    border: 2px solid lightsteelblue;
+    cursor: pointer;
+    font-size: 25px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24), 0 5px 10px 0 rgba(0,0,0,0.19);
+}
+
+.options {
+    color: darkgray;
+    background-color: lightcyan;
+    font-size: 20px;
+}
+
+#rating {
+    vertical-align: top;
+}
+
+/*search input*/
+.search_input {
+    position: relative;
+    top: 20px;
+    right: 15px;
+    width: 475px;
+    padding: 2px 5px;
+    float: right;
+    cursor: text;
+    font-size: 25px;
+    border-radius: 3px;
+    border: 2px solid lightsteelblue;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24), 0 5px 10px 0 rgba(0,0,0,0.19);
+}
+
+::placeholder {
+    color: lightgray;
+    font-style: italic;
+}
+
+/*search icon*/
+.icon {
+    position: relative;
+    right: 10px;
+    top: 23px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    border: 5px red;
+}
+
+/*note text*/
+.note {
+    position: relative;
+    left: 15px;
+    top: 25px;
+    font-size: 15px;
+    color: gray;
+}
+
+/*map*/
+.map {
+    z-index: 0;
+    position: relative;
+    top: 20px;
+    right: 10px;
+    border: 3px solid lightsteelblue;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24), 0 5px 10px 0 rgba(0,0,0,0.19);
+}
+
+/*results text*/
+.results {
+    position: relative;
+    top: 15px;
+    left: 15px;
+    font-size: 30px;
+    padding-bottom: 0;
+}
+
+.changeCity {
+    z-index: 100;
+    position: absolute;
+    top: 130px;
+    left: 208px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 15px;
+    color: black;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.24), 0 1px 2px 0 rgba(0,0,0,0.19);
+    display: none;
+}
+
+#info {
+    position: relative;
+    left: 7px;
 }
