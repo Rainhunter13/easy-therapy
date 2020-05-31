@@ -22,8 +22,8 @@ $( document ).ready( function() {
      
   var coll = document.getElementsByClassName("collaps");
   var colll = document.getElementsByClassName("collapsib");
-  var i;
   
+  var i;
   for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
       this.classList.toggle("active");
@@ -46,6 +46,11 @@ $( document ).ready( function() {
       }
     });
   }
+  $("button").click(function() {
+    $("button").removeClass("active");
+    $(this).addClass("active");
+    
+  });
  
   var day=10;
 var month=5;
@@ -191,7 +196,9 @@ function show(month, year,day) {
               cell.appendChild(cellText);
               row.appendChild(cell);
               if (day===date){
-                cell.style.color="red";
+                cell.style.color="white";
+                cell.style.fontWeight="bold";
+                cell.bgColor = '#43a5fc';
               }
               date++;
           }
