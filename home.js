@@ -1,5 +1,4 @@
-// FIREBASE CONFIGURATION
-var firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyDlsoAqDJA213Z40hLcSLcDOYuHeMphUWE",
   authDomain: "dp4heat.firebaseapp.com",
   databaseURL: "https://dp4heat.firebaseio.com",
@@ -11,16 +10,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
 
-$( document ).ready( function() {
-
-  // FIREBASE TEST
-  var ref = db.collection("users").doc("test")
-  ref.get().then(function (doc) {
-    data = doc.data();
-    for (key in data) {
-      console.log(key);
-    }
-  });
+$( document ).ready(function() {
 
   // SEARCH BY FILTERS
   var search_icon = document.getElementById("search_icon");
@@ -61,6 +51,60 @@ $( document ).ready( function() {
       $(info).removeClass("on");
       changeCity.style.display = "none";
     }
-  )
+  );
+
+  // MAKE THERAPIST LIST TABLE FROM FIREBASE
+  var city = "Daejeon";
+  var therapists = db.collection("therapists").doc(city);
+
+  var tbl = document.getElementById("tbl");
+  var sz = 0;
+
+  (async () => {
+
+    await therapists.get().then(async function (doc) {
+      data = doc.data();
+
+      for (key in data) {
+
+
+        var r = tbl.insertRow(sz);
+        var c = r.insertCell(0);
+        $(c).addClass("cell");
+        if (sz%2===1) c.style.backgroundColor = "white";
+        c.style.cursor = "pointer";
+
+        c.innerHTML += "<b style='font-size: 20px'>"+key + ", " + data[key]["info"]["age"] +"</b>";
+        c.innerHTML += "<br>" + data[key]["info"]["specialization"];
+        c.innerHTML += "<br>" + data[key]["description"]["price"] + "$ per hour";
+        c.innerHTML += "<br>" + data[key]["description"]["district"];
+
+        c.onclick = function () {
+          alert("clicked");
+        };
+
+        sz++;
+
+
+        // database filling (fake values)
+        // var sp = ["Gung-Dong", "Dunsan-Dong", "Eoeun-Dong", "Doryong-Dong", "Daehwa-Dong", "Samseong-Dong"];
+        // data[key]["description"]["district"] = sp[Math.floor(Math.random()*6)];
+        // therapists.update({
+        //   [key]: data[key]
+        // })
+
+      }
+
+    });
+
+    var note = document.getElementById("note");
+    note.innerHTML = sz.toString() + note.innerHTML;
+
+
+
+
+
+
+  })();
 
 });

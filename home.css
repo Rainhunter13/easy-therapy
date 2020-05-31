@@ -126,16 +126,16 @@ body {
     z-index: 0;
     position: relative;
     top: 20px;
-    right: 10px;
-    border: 3px solid lightsteelblue;
+    right: 20px;
+    border: 2px solid lightsteelblue;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24), 0 5px 10px 0 rgba(0,0,0,0.19);
 }
 
-/*results text*/
+/*results found text*/
 .results {
     position: relative;
     top: 15px;
-    left: 15px;
+    left: 20px;
     font-size: 30px;
     padding-bottom: 0;
 }
@@ -144,7 +144,7 @@ body {
     z-index: 100;
     position: absolute;
     top: 130px;
-    left: 208px;
+    left: 218px;
     border-radius: 5px;
     border: 1px solid black;
     font-size: 15px;
@@ -156,5 +156,26 @@ body {
 
 #info {
     position: relative;
-    left: 7px;
+    left: 17px;
+}
+
+/*list of therapists table*/
+.therapistsTable {
+    position: relative;
+    width: 100%;
+}
+
+div.list {
+    position: relative;
+    left: 20px;
+    background-color: #e4e4e4;
+    border: 2px solid lightsteelblue;
+    width: 30%;
+    height: 500px;
+    overflow: auto;
+}
+
+.cell {
+    position: relative;
+    padding: 5px 0 5px 5px;
 }
