@@ -58,9 +58,9 @@
 
     <select class="filter" id="age" name="age">
         <option class="options">Age</option>
-        <option class="options"> 18-30 years old</option>
+        <option class="options"> < 30 years old</option>
         <option class="options"> 30-50 years old</option>
-        <option class="options"> >50 years old</option>
+        <option class="options"> > 50 years old</option>
     </select>
 
     <select class="filter" style="font-size: 25px" id="rating" name="rating">
@@ -84,7 +84,7 @@
     <div>
       <iframe align="right" class="map"
         id = "map"
-        width = "1000px"
+        width = "65%"
         height = "550px"
         src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyC8Kum3xeygioNie-92TSmXe7meVU7Ibho
         &q=Daejeon&maptype=roadmap&language=en&zoom=13"
@@ -92,13 +92,22 @@
       </iframe>
     </div>
 
-<!--results found text-->
+    <!--results found text-->
     <br>
-    <a class="results">134 results found in Daejeon</a>
+    <a id="note" class="results"> results found in Daejeon</a>
 
-<!--change city info icon + description-->
+    <!--change city info icon + description-->
     <i id="info" class="fas fa-info-circle"></i>
     <button id="changeCity" class="changeCity">In order to change the city adjust you profile information</button>
+
+    <!--list of therapists-->
+    <br><br>
+    <div class="list">
+        <table id="tbl" class="therapistsTable">
+        </table>
+    </div>
+
+
 
 </body>
 

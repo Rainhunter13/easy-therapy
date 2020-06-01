@@ -31,18 +31,18 @@ body {
     background-color: #9ee2ff;
     color: white;
   }
-  .collapsible {
+  #collapsible {
     background-color: #43a5fc;
     color: white;
     cursor: pointer;
     padding: 20px;
-    width: 90%;
+    width: 80%;
     border: 3px;
     border-radius: 12px;
      border-color: white; 
      border-style: solid; 
      display: block;
-    margin-left: 20px;
+    margin-left: 50px;
   
     
     text-align: center;
@@ -54,13 +54,13 @@ body {
     color: white;
     cursor: pointer;
     padding: 20px;
-    width: 90%;
+    width: 85%;
     border: 3px;
     border-radius: 12px;
      border-color: white; 
      border-style: solid; 
      display: block;
-    margin-left: 20px;
+    margin-left: 50px;
   
     
     text-align: center;
@@ -80,7 +80,10 @@ body {
   .active, .collapsible:hover {
     background-color: #A9A9A9;
   }
- 
+  .collapsib.active {
+    background-color:#A9A9A9 ;
+    color: white;
+  }
   .content {
     padding: 0 18px;
     display: none;
@@ -178,7 +181,9 @@ color:gold;
   box-shadow: 5px 10px whitesmoke;
 }
 .card{
+  margin-left :0%;
   border: 2px solid black;
+  width : 600px;
 
 }
 .deleteDep{
