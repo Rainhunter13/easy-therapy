@@ -66,17 +66,24 @@ body {
   }
 
   .occupied {
-    background-color: rgba(255, 101, 101, 0.87); 
-    /* border-right: 3px solid white; */
-    /* border-left: 3px solid white; */
-    /* border: 1px solid white; */
+    /* background-color: rgba(255, 101, 101, 0.87);  */
+    background: repeating-linear-gradient(
+      45deg,
+      #e6e6e6,
+      #e6e6e6 10px,
+      #f4f4f4 10px,
+      #f4f4f4 20px
+    );
   }
 
   .yourapt {
     background-color: #43a5fc; 
-    /* border-left:3px solid white; */
-    /* border-right: 3px solid white; */
-    /* border: 1px solid white; */
+    color: white;
+    cursor: pointer;
+  }
+
+  .yourapt:hover {
+    border: 3px dotted white !important;
   }
 
   .free {
@@ -102,11 +109,14 @@ body {
   }
 
   .darkrow {
-    background-color: #c3c3c3;
+    /* background-color: #c3c3c3; */
+    background-color: #dfdfdf;
+    
   }
 
   .lightrow {
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
+    background-color: #dfdfdf;
   }
 
   #therapist_info{
@@ -212,6 +222,105 @@ body {
     margin-bottom: 1em; 
     margin-left: 0.6em;
   }
+
+  #thanks_message {
+    display: none;
+    font-size: 18px;
+    margin-left: 4em;
+    margin-right: 4em;
+    text-align: center;
+    color: white;
+    background-color: #43a5fc;
+  }
+
+  #delete_message {
+    display: none;
+    font-size: 18px;
+    margin-left: 4em;
+    margin-right: 4em;
+    text-align: center;
+    color: white;
+    background-color: #43a5fc;
+  }
+
+
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  background-color: #fefefe;
+  width: 47.5%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #43a5fc;
+  color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+  background-color: #f4f4f4;
+}
+
+
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
 
  
   

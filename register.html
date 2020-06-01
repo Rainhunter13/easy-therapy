@@ -101,7 +101,7 @@
 
     <table id="register_table">
         <tr style="border-bottom: 0px;">
-          <th></th>
+          <th rowspan ="2">June</th>
           <th>8</th>
           <th>9</th>
           <th>10</th>
@@ -111,7 +111,7 @@
           <th>14</th>
         </tr>
         <tr>
-          <td></td>
+        
           <td>
             Mon
           </td>
@@ -178,7 +178,7 @@
           <td class="hour"><span>13:00</span></td>
           <td class="yourapt">Your appointment</td>
           <td rowspan="2" class="occupied">Occupied</td>
-          <td class="free"></td>
+          <td class="free" id = "newApp"></td>
           <td class="occupied" rowspan="4">Occupied</td>
           <td class="occupied">Occupied</td>
           <td class="free"></td>
@@ -217,6 +217,42 @@
           <td class="free"></td>
         </tr>
     </table>
+
+    <p id = "thanks_message">Registration successfull, thank you!</p>
+    <p id = "delete_message">Appointment cancelled</p>
+
+    <div id="myModal" class="modal">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2 class="before_confirm">Set up an appointment with Karen? </h2>
+          <h2 class="after_confirm">Edit your appointment</h2>
+        </div>
+        <div class="modal-body">
+          <p class="before_confirm">Please, confirm an appointment at: <span style="font-weight: 600;">Wednesday, June 10th, 13:00 </span></p>
+          <p class="after_confirm">Your appointment is set at: <span style="font-weight: 600;">Wednesday, June 10th, 13:00 </span></p>
+          <p> <input type="checkbox" name="notify" value="notify-yes" id="notify_checkbox"> <label for="notify"> Notify me </label> 
+            
+            <select name="notification_time" id="notification_time" style="margin-left: 1em;" disabled>
+              <option value="week">A week before</option>
+              <option value="day">A day before</option>
+              <option value="hour">An hour before</option>
+            </select>
+            <button type="button" class="after_confirm" id="delete_button" style="background-color: #fc4343; color: white; border: 1px solid black; float: right; cursor: pointer;">
+              Delete</button>
+            <button type="button" class="before_confirm" id="confirm_button" style="background-color: #43a5fc; color: white; border: 1px solid black; float: right; cursor: pointer;">
+              Confirm</button> 
+            
+          
+          </p>
+        </div>
+        
+      </div>
+    
+
+    </div>
+
   </div>
 
 </div>
@@ -227,12 +263,7 @@
 
 
 
-<script>
-  function showPopup() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-}
-</script>
+
 
 
 
@@ -263,12 +294,14 @@
 <!-- LINKS TO FIREBASE AND JQUERY HERE -->
     <script src="jquery/js/jquery-1.9.0.min.js"></script>
     <script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
-    <script src="./register.js"></script>
+    
  <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-firestore.js"></script>
 
 <script>
   // Your web app's Firebase configuration
@@ -289,7 +322,7 @@
  <!-- END OF LINKS -->
 
 
-
+ <script src="./register.js"></script>
 
   </body>
 </html>
