@@ -1,0 +1,64 @@
+.menu {
+  background-color: #43a5fc;
+  overflow: hidden;
+}
+/* Style the links inside the navigation bar */
+.menuLink {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+/* Change the color of links on hover */
+.menuLink:hover {
+  background-color: #edfaff;
+  color: black;
+}
+/* Add a color to the active/current link */
+#active {
+  background-color: #9ee2ff;
+  color: white;
+}
+.icons {
+  background-color: white;
+  overflow: hidden;
+}
+.iconWords {
+  color: black;
+  padding: 10px 0px;
+  text-decoration: none;
+  font-size: 18px;
+}
+#text {
+  width: 47.5%;
+  background-color: #edfaff;
+  box-shadow: 3px 4px 3px #bcbbbb;
+  overflow: hidden;
+  margin-left: 28px;
+  margin-top: 12px;
+}
+.tx {
+  margin-left: 30px;
+  margin-top: 12px;
+  font-size: 18px;
+}
+#sn {
+  width: 47.5%;
+  background-color: #edfaff;
+  box-shadow: 3px 4px 3px #bcbbbb;
+  margin-right: 28px;
+  margin-top: 12px;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+.button {
+  padding: 4px 30px;
+  margin-right: 60px;
+  margin-top: 40px;
+  margin-bottom: 83px;
+  float: right;
+}
