@@ -1,17 +1,6 @@
+
 $( document ).ready( function() {
 
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyDlsoAqDJA213Z40hLcSLcDOYuHeMphUWE",
-    authDomain: "dp4heat.firebaseapp.com",
-    databaseURL: "https://dp4heat.firebaseio.com",
-    projectId: "dp4heat",
-    storageBucket: "dp4heat.appspot.com",
-    messagingSenderId: "75419734917",
-    appId: "1:75419734917:web:fc352a3abda9bc74506aec"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
 
   $('.stars a').on('click', function(){
     $('.stars span, .stars a').removeClass('active');
@@ -51,7 +40,8 @@ $( document ).ready( function() {
     $(this).addClass("active");
     
   });
- 
+   
+  //const collection = db.collection('user_dat');
   var day=10;
 var month=5;
 var year=2020;
@@ -214,22 +204,7 @@ function show(month, year,day) {
 function daysInMonth(iMonth, iYear) {
     return 32 - new Date(iYear, iMonth, 32).getDate();
 }
-$('body').on('click', 'input.deleteDep', function() {   
-  $(this).closest('tr').remove();
-  alert( "You have canceled the tharapy session" );
-  table();
-})
-function table(){
-  var myTable = document.getElementById("mytable");
-  var numRows = myTable.rows.length;
-   if(numRows===0){
-    var newRow = myTable.insertRow(numRows);
-    var newCell1 = newRow.insertCell(0);
-    var newCell2 = newRow.insertCell(1);
-    var newCell3 = newRow.insertCell(2);
-    newCell2.innerHTML="No upcoming visits";
-                                                             
-                                             }}
-                                             table();
+
+
 
   })
