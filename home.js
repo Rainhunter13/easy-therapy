@@ -22,6 +22,7 @@ var fPrice = "Max. Price";
 var fAgeMin = "0";
 var fAgeMax = "100";
 var fRating = "1";
+var fName = "";
 
 // FILTERS APPLYING FUNCTION
 async function update() {
@@ -41,9 +42,9 @@ async function update() {
       var f2 = fPrice==="Max. Price" || parseInt(fPrice)>=parseInt(data[key]["description"]["price"]);
       var f3 = parseInt(fAgeMin)<=parseInt(data[key]["info"]["age"]) && parseInt(fAgeMax)>=parseInt(data[key]["info"]["age"]);
       var f4 = parseInt(fRating)<=parseInt(data[key]["info"]["rating"]);
+      var f5 = fName==="" || fName===key;
 
-
-      if (f1 && f2 && f3 && f4) {
+      if (f1 && f2 && f3 && f4 && f5) {
         var r = tbl.insertRow(sz);
         var c = r.insertCell(0);
         $(c).addClass("cell");
@@ -109,13 +110,10 @@ async function update() {
 // DOCUMENT LOADED MAIN FUNCTION
 $( document ).ready(function() {
 
-  // SEARCH BY FILTERS
-  var search_icon = document.getElementById("search_icon");
-  search_icon.onclick = function () {
-    alert("works");
-  };
+  // MAKE THERAPIST LIST FROM FIREBASE WHEN REFRESHING
+  update();
 
-  // CHANGE CITY INFO ICON
+  // CHANGE CITY INFO ICON WHEN HOVER
   var info = document.getElementById("info");
   var changeCity = document.getElementById("changeCity");
   $(info).hover(
@@ -130,9 +128,6 @@ $( document ).ready(function() {
       changeCity.style.display = "none";
     }
   );
-
-  // MAKE THERAPIST LIST FROM FIREBASE WHEN REFRESHING
-  update();
 
   // FILTERS EVENT LISTENERS
 
@@ -200,6 +195,13 @@ $( document ).ready(function() {
       rating.style.fontSize = "25px";
     }
   });
+
+  // SEARCH BY NAME
+  var search_icon = document.getElementById("search_icon");
+  search_icon.onclick = function () {
+    fName = document.getElementById("search_input").value;
+    if (fName==="") alert("Type the name of the therapist!"); else update();
+  };
 
 
 });
