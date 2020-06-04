@@ -24,6 +24,9 @@ var fAgeMax = "100";
 var fRating = "1";
 var fName = "";
 
+const url = "https://www.google.com/maps/embed/v1/place?key=AIzaSyC8Kum3xeygioNie-92TSmXe7meVU7Ibho&q=";
+const params = "&maptype=roadmap&language=en&zoom=";
+
 // FILTERS APPLYING FUNCTION
 async function update() {
 
@@ -46,6 +49,7 @@ async function update() {
 
       if (f1 && f2 && f3 && f4 && f5) {
         var r = tbl.insertRow(sz);
+
         var c = r.insertCell(0);
         $(c).addClass("cell");
         if (sz % 2 === 1) c.style.backgroundColor = "white"; else c.style.backgroundColor = "#e4e4e4";
@@ -57,17 +61,28 @@ async function update() {
           s += "&starf; ";
         }
 
+        // c.innerHTML += "<img src=\"user_avatar.png\" alt=\"avatar\" width=\"130px\" height=\"130px\"" +
+        //   "style='position: absolute;'>";
+
+        // c.innerHTML += "<div style='position: absolute; left: 100px'>";
         c.innerHTML += "<b style='font-size: 25px'>" + key + ", " + data[key]["info"]["age"] + "</b>";
         c.innerHTML += "<br>" + data[key]["info"]["specialization"];
         c.innerHTML += "<br>" + data[key]["description"]["price"] + "$ per hour";
         c.innerHTML += "<br>" + data[key]["description"]["district"];
         c.innerHTML += "<br>" + "<b style='font-size: 20px'>" + "" + s + "</b>";
+        c.innerHTML += "<br>" + "<a href='register.html' style='color: blue; text-decoration: underline; font-size: 20px'>Register</a>";
+        // c.innerHTML += "</div>";
 
         c.onclick = function () {
+          var map = document.getElementById("map");
           if ($(this).hasClass("selected")) {
             $(this).removeClass("selected");
             this.style.border = "0px";
-          } else {
+            map.src = url + "Daejeon" + params + "13";
+          }
+          else {
+            var address = data[key]["address"]["lan"] + "," + data[key]["address"]["lat"];
+            map.src = url + address + params + "15";
             $(this).addClass("selected");
             this.style.border = "2px solid blue";
           }
@@ -200,7 +215,7 @@ $( document ).ready(function() {
   var search_icon = document.getElementById("search_icon");
   search_icon.onclick = function () {
     fName = document.getElementById("search_input").value;
-    if (fName==="") alert("Type the name of the therapist!"); else update();
+    update();
   };
 
 
