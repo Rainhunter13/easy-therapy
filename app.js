@@ -10,7 +10,7 @@ $( document ).ready( function() {
   });
      
   var coll = document.getElementsByClassName("collaps");
-  var colll = document.getElementsByClassName("collapsib");
+  var colll = document.getElementsByClassName("collapsible");
   
   var i;
   for (i = 0; i < coll.length; i++) {
@@ -42,16 +42,7 @@ $( document ).ready( function() {
   });
    
   //const collection = db.collection('user_dat');
-  var day=10;
-var month=5;
-var year=2020;
-  function search(month,yaer,day) {
-    var next = document.getElementById("search");
-    next.onclick = function() {
-      showCalendar(month, year);
-      show(month,year,day);}
-  }
-  search(month,year,day); 
+
 
 
 var today = new Date();
@@ -145,60 +136,7 @@ function showCalendar(month, year) {
     }
 
 }
-function show(month, year,day) {
 
-  let firstDay = (new Date(year, month)).getDay();
-
-  var tbl = document.getElementById("calendar-body"); // body of the calendar
-
-  // clearing all previous cells
-  tbl.innerHTML = "";
-
-  // filing data about month and in the page via DOM.
-  monthAndYear.innerHTML = months[month] + " " + year;
-  selectYear.value = year;
-  selectMonth.value = month;
-
-  // creating all cells
-  let date = 1;
-  for (let i = 0; i < 6; i++) {
-      // creates a table row
-      let row = document.createElement("tr");
-
-      //creating individual cells, filing them up with data.
-      for (let j = 0; j < 7; j++) {
-          if (i === 0 && j < firstDay) {
-              var cell = document.createElement("td");
-              var cellText = document.createTextNode("");
-              cell.appendChild(cellText);
-              row.appendChild(cell);
-          }
-          else if (date > daysInMonth(month, year)) {
-              break;
-          }
-
-          else {
-              var cell = document.createElement("td");
-              var cellText = document.createTextNode(date);
-              if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
-                  cell.classList.add("bg-info");
-              } // color today's date
-              cell.appendChild(cellText);
-              row.appendChild(cell);
-              if (day===date){
-                cell.style.color="white";
-                cell.style.fontWeight="bold";
-                cell.bgColor = '#43a5fc';
-              }
-              date++;
-          }
-
-
-      }
-
-      tbl.appendChild(row); // appending each row into calendar body.
-  }
-}
 
 // check how many days in a month code from https://dzone.com/articles/determining-number-days-month
 function daysInMonth(iMonth, iYear) {
