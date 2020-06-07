@@ -104,9 +104,9 @@ body {
   width:900px;
 }
 .panel{
-width:500px;
-height:400px;
-margin-left:25%;
+width:800px;
+height:600px;
+margin-left:15%;
 text-align: left;
 text-indent: 1.5em;
 font-size: 15px;
@@ -163,17 +163,17 @@ color:gold;
 
 
 .not{
-  margin-left:22.5%;
-  width:600px;
+  margin-left:11.5%;
+  width:750px;
   text-align: left;
   padding: 10px;
   border: 1px solid lightgray;
   box-shadow: 5px 10px whitesmoke;
 }
 .card{
-  margin-left :0%;
+  margin-left :-20%;
   border: 2px solid black;
-  width : 600px;
+  width : 750px;
 
 }
 .deleteDep{
