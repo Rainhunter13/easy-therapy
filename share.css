@@ -25,6 +25,17 @@ body {
   background-color: #9ee2ff;
   color: white;
 }
+.profile {
+    position: relative;
+    top: 15px;
+    right: 25px;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+}
 .icons {
   background-color: white;
   overflow: hidden;
