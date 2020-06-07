@@ -47,11 +47,11 @@ body {
   font-size: 18px;
 }
 #text {
-  width: 47.5%;
+  width: 70%;
   background-color: #edfaff;
   box-shadow: 3px 4px 3px #bcbbbb;
   overflow: hidden;
-  margin-left: 28px;
+  margin-left: 200px;
   margin-top: 12px;
 }
 .tx {
@@ -60,10 +60,10 @@ body {
   font-size: 18px;
 }
 #sn {
-  width: 47.5%;
+  width: 70%;
   background-color: #edfaff;
   box-shadow: 3px 4px 3px #bcbbbb;
-  margin-right: 28px;
+  margin-left: 200px;
   margin-top: 12px;
 }
 .column {
