@@ -2,7 +2,6 @@
 // has finished loading in the browser.
 
  $( document ).ready(function() {
-var n = document.getElementById("n");
 var family = document.getElementById("family");
 var children = document.getElementById("children");
 var stress = document.getElementById("stress");
@@ -20,8 +19,6 @@ var preview = document.getElementById("preview");
 
 function bindEvents() {
   preview.onclick = function () {
-    val = n.value;
-    console.log(val);
   };
 }
 bindEvents();
@@ -31,8 +28,7 @@ $("#dialog").dialog({ modal: true, autoOpen: false });
 $("#preview").click(function () {
   var radioValue = $("input[name='therapist']:checked").val();
   $("#dialog").html(
-    "<a>Hello, I am </a>" +
-      $("#n").val() +
+    "<a>Hello, I am Mia.</a>" +
       "<p> I would like to share my experience in HELP therapy center. " +
       "<a>I used the services of </a>" +
       radioValue +
