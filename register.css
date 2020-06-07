@@ -28,7 +28,7 @@ body {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 15px 16px;
     text-decoration: none;
     font-size: 18px;
   }
@@ -252,6 +252,17 @@ body {
     background-color: #43a5fc;
   }
 
+  .profile {
+    position: relative;
+    top: 15px;
+    right: 25px;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+}
 
 
   /* The Modal */
