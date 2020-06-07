@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
 <link href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -105,8 +106,8 @@
             <b>Time:</b><a id="time"></a>
             <p><b>Therapist:</b> <a id ="therapist"></a>
             </p>
-        </td><td><input type="button" id='search' value='Find'></td><td>
-            <button type="button" id="notify" class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal">Notify me</button>
+        </td><td></td><td>
+            <button type="button" id="notify" class="btn-block" data-toggle="modal" data-target="#myModal">Notify me</button>
 
             <div class="modal fade" id="myModal" role="dialog">
               <div class="modal-dialog">
@@ -115,13 +116,13 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">You've successfully set the notification</h4>
+                    <h3 class="modal-title">You've successfully set the notification</h3>
                   </div>
                   <div class="modal-body">
-                    <p>The notification will be sent to you by message!!!
-                      <br><input type="radio" class="notif" name="notif">A week before
-                      <br><input type="radio" class="notif" name="notif" checked>A day before
-                      <br><input type="radio" class="notif" name="notif">An hour before
+                    <p>The notification will be sent to you by message!!!<br>
+                      <input type="radio" class="notif" name="notif">  A week before<a></a>
+                      <input type="radio" class="notif" name="notif" checked>  A day before
+                      <input type="radio" class="notif" name="notif">  An hour before
                       
                     </p>
                   </div>
@@ -134,7 +135,8 @@
             </div>
             
         </td>
-        <td><input type="button" class='deleteDep' value='Cancel'>
+        <td>
+          <button id="try" class='deleteDep'>Cancel</button>
         </td>
     </tr>
 </table>
@@ -180,7 +182,7 @@
  
  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
 </body>
 
 

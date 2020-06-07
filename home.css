@@ -47,6 +47,7 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 18px;
+    cursor: pointer;
 }
 
 /*page title*/
@@ -135,16 +136,17 @@ body {
 .results {
     position: relative;
     top: 15px;
-    left: 20px;
+    left: 25px;
     font-size: 30px;
     padding-bottom: 0;
 }
 
+/*info icon*/
 .changeCity {
     z-index: 100;
     position: absolute;
     top: 130px;
-    left: 218px;
+    left: 202px;
     border-radius: 5px;
     border: 1px solid black;
     font-size: 15px;
@@ -168,7 +170,7 @@ body {
 div.list {
     position: relative;
     left: 20px;
-    background-color: #e4e4e4;
+    background-color: whitesmoke;
     border: 2px solid lightsteelblue;
     width: 30%;
     height: 500px;
