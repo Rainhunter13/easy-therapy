@@ -58,23 +58,6 @@ var monthAndYear = document.getElementById("monthAndYear");
 showCalendar(currentMonth, currentYear);
 
 
-function next() {
-  var next = document.getElementById("next");
-  next.onclick = function() {
-    currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
-    currentMonth = (currentMonth + 1) % 12;
-    showCalendar(currentMonth, currentYear);}
-}
-next();
-
-function previous() {
-  var prev = document.getElementById("previous");
-  prev.onclick = function() {
-    currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
-    currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
-    showCalendar(currentMonth, currentYear);}
-}
-previous();
 function jump() {
   selectMonth.onchange = function() {
     currentYear = parseInt(selectYear.value);
