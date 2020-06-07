@@ -15,14 +15,23 @@ the functionality (e.g. registering for and managing appointments)
 
 **Google Maps Embed API** was used for the *Home* page
 
+<br>
+<br>
+
 ### Home page
 Consists of a map and search filters that allow users to easily and quickly find nearby therapists and their description.
+
+<br>
 
 ### Register page
 Consists of a detailed information about chosen therapist's expertise, fees, education, etc. Features a scheduling table through which registration for an appointment as well as its cancellation is possible.
 
+<br>
+
 ### My Appointments page
 Is used to manage both upcoming appointments and appointment history to set notifications, cancel appointments and rate past appointments and therapists. 
+
+<br>
 
 ### Share Experience page
 Is used to share personal therapy experience to gain discounts through promocodes. 
