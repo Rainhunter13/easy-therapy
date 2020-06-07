@@ -99,12 +99,12 @@ body {
   }
 
   .fa-chevron-left:hover {
-    color: orange !important;
+    color: #43a5fc !important;
     cursor: pointer;
   }
-  
+
   .fa-chevron-right:hover {
-    color: orange !important;
+    color: #43a5fc !important;
     cursor: pointer;
   }
 
@@ -155,7 +155,15 @@ body {
     color: orange;
   }
 
+  .fa-caret-square-right:hover{
+    cursor: pointer;
+    color: #43a5fc !important;
+  }
 
+  .fa-caret-square-left:hover{
+    cursor: pointer;
+    color:#43a5fc !important;
+  }
 
   #rating{
     margin-left: 65px;
@@ -170,9 +178,10 @@ body {
     border-top: 1px solid lightgray !important;
   }
 
-  #detail_info p{
+  #detail_info td{
     color: #4d4d4d;
     font-size: 1.4em;
+    height: 2.2em;
   }
 
   #detail_info span{
@@ -197,13 +206,13 @@ body {
     resize: none;
     width: 95%;
     margin-top: 1em;
-    -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
-       -moz-box-sizing: border-box; /* FF1+ */
-            box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
+    -webkit-box-sizing: border-box; 
+       -moz-box-sizing: border-box; 
+            box-sizing: border-box; 
   }
 
   #post_button {
-    background-color: #43a5fc; /* Green */
+    background-color: #43a5fc;
     border: none;
     color: white;
     padding: 5px 10px;
@@ -244,7 +253,8 @@ body {
   }
 
 
-  /* The Modal (background) */
+
+  /* The Modal */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
