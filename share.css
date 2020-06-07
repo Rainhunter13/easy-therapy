@@ -66,6 +66,9 @@ body {
   margin-left: 200px;
   margin-top: 12px;
 }
+.one {
+ width = 70%; 
+}
 .column {
   float: left;
   width: 50%;
