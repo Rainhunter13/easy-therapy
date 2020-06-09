@@ -58,17 +58,6 @@ var monthAndYear = document.getElementById("monthAndYear");
 showCalendar(currentMonth, currentYear);
 
 
-function jump() {
-  selectMonth.onchange = function() {
-    currentYear = parseInt(selectYear.value);
-    currentMonth = parseInt(selectMonth.value);
-    showCalendar(currentMonth, currentYear);}
-    selectYear.onchange = function() {
-      currentYear = parseInt(selectYear.value);
-      currentMonth = parseInt(selectMonth.value);
-      showCalendar(currentMonth, currentYear);}
-}
-jump();
 function showCalendar(month, year) {
 
     let firstDay = (new Date(year, month)).getDay();

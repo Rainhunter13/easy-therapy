@@ -15,7 +15,7 @@ body {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 15px 16px;
+    padding: 14px 16px;
     text-decoration: none;
     font-size: 18px;
     cursor: pointer;
@@ -195,13 +195,26 @@ color:gold;
      display: block;
 }
 #notify{
+  margin-left: 10%;
   background-color: #43a5fc;
     color: white;
     border-radius: 12px;
-    border: 3px;
-     border-color: white; 
+    border: 5px;
+     border-color: #43a5fc; 
      border-style: solid; 
      display: block;
+     font-size:20px;
+}
+#try{
+  margin-left: 25%;
+  background-color: #43a5fc;
+    color: white;
+    border-radius: 12x;
+    border: 5px;
+     border-color: #43a5fc; 
+     border-style: solid; 
+     display: block;
+     font-size:20px;
 }
 .indent{
   text-indent: 1.5em;

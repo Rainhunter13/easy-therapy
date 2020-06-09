@@ -136,10 +136,14 @@ var db = firebase.firestore();
     next.onclick = function() {
       currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
       currentMonth = (currentMonth + 1) % 12;
+      appointments.doc('Mia->Karen').get().then(async function (doc) {
+        if (doc.exists){
       if (currentMonth===5 && currentYear===2020)
       {show(month,year,day);
       }
+      else { showCalendar(currentMonth, currentYear);}}
       else { showCalendar(currentMonth, currentYear);}
+    })
      
     }
   }
@@ -150,13 +154,44 @@ var db = firebase.firestore();
     prev.onclick = function() {
       currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
       currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
+      appointments.doc('Mia->Karen').get().then(async function (doc) {
+        if (doc.exists){
       if (currentMonth===5 && currentYear===2020)
       {show(month,year,day);
       }
+      else { showCalendar(currentMonth, currentYear);}}
       else { showCalendar(currentMonth, currentYear);}
+    })
      }
   }
   previous();
+  
+function jump() {
+  selectMonth.onchange = function() {
+    currentYear = parseInt(selectYear.value);
+    currentMonth = parseInt(selectMonth.value);
+    appointments.doc('Mia->Karen').get().then(async function (doc) {
+      if (doc.exists){
+    if (currentMonth===5 && currentYear===2020)
+    {show(month,year,day);
+    }
+    else { showCalendar(currentMonth, currentYear);}}
+    else { showCalendar(currentMonth, currentYear);}
+  })}
+    selectYear.onchange = function() {
+      currentYear = parseInt(selectYear.value);
+      currentMonth = parseInt(selectMonth.value);
+      appointments.doc('Mia->Karen').get().then(async function (doc) {
+        if (doc.exists){
+      if (currentMonth===5 && currentYear===2020)
+      {show(month,year,day);
+      }
+      else { showCalendar(currentMonth, currentYear);}}
+      else { showCalendar(currentMonth, currentYear);}
+    })
+    }
+}
+jump();
   function showCalendar(month, year) {
 
     let firstDay = (new Date(year, month)).getDay();
