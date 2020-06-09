@@ -23,7 +23,7 @@ function bindEvents() {
 }
 bindEvents();
 
-$("#dialog").dialog({ modal: true, autoOpen: false });
+$("#dialog").dialog({modal: true, bgiframe: true, autoOpen: false, title: 'Preview',  buttons: { "Ok": function() { $(this).dialog("close"); } }, closeOnEscape: false});
 
 $("#preview").click(function () {
   var radioValue = $("input[name='therapist']:checked").val();
@@ -69,7 +69,7 @@ family.onclick = function () {
   career.checked = false;
 };
 
-$("#dialog2").dialog({ modal: true, autoOpen: false });
+$("#dialog2").dialog({modal: true, bgiframe: true, autoOpen: false, title: 'Share',  buttons: { "Ok": function() { $(this).dialog("close"); } }, closeOnEscape: false});
 
 $("#share").click(function () {
   $("#dialog2").html(
