@@ -75,7 +75,7 @@ $("#share").click(function () {
   $("#dialog2").html(
     "<a> Congratulations!</a>" +
       "<p>You shared your experience." +
-      "<p> Your promocode : AH9F23MP </p>"
+      "<p> Your promocode is saved to your account. </p>"
   );
   $("#dialog2").dialog("open");
 });
