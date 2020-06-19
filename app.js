@@ -1,6 +1,14 @@
 
 $( document ).ready( function() {
 
+  $('#notify_checkbox').click(function(){
+    if($(this).is(":checked")){
+      document.getElementById('notification_time').removeAttribute('disabled');
+    }
+    else{
+      document.getElementById('notification_time').setAttribute('disabled', 'disabled');
+    }
+  });
 
   $('.stars a').on('click', function(){
     $('.stars span, .stars a').removeClass('active');
@@ -94,7 +102,7 @@ function showCalendar(month, year) {
                 var cell = document.createElement("td");
                 var cellText = document.createTextNode(date);
                 if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
-                    cell.classList.add("bg-info");
+                    
                 } // color today's date
                 cell.appendChild(cellText);
                 row.appendChild(cell);

@@ -116,37 +116,18 @@
             <b>Time:</b><a id="time"></a>
             <p><b>Therapist:</b> <a id ="therapist"></a>
             </p>
-        </td><td></td><td>
-            <button type="button" id="notify" class="btn-block" data-toggle="modal" data-target="#myModal">Notify me</button>
-
-            <div class="modal fade" id="myModal" role="dialog">
-              <div class="modal-dialog">
-              
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h3 class="set" class="modal-title"> <a style=" visibility: hidden;">v</a>Setting notification</h3>
-                  </div>
-                  <div class="modal-body">
-                    <p>The notification will be sent to you by message!!! Choose when do you want to receive it<br>
-                      <input type="radio" class="notif" name="notif">  A week before<a></a>
-                      <input type="radio" class="notif" name="notif" checked>  A day before
-                      <input type="radio" class="notif" name="notif">  An hour before
-                      
-                    </p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
-                  </div>
-                </div>
-                
-              </div>
-            </div>
+        </td><td></td><td ><div>
+          <input type="checkbox" name="notify" value="notify-yes" id="notify_checkbox"> <label for="notify"> Notify me </label> 
             
+            <select name="notification_time" id="notification_time" style="margin-left: 1em;" disabled>
+              <option value="week">A week before</option>
+              <option value="day">A day before</option>
+              <option value="hour">An hour before</option>
+            </select>
+            </div>
         </td>
         <td>
-          <button id="try" class='deleteDep'> Cancel</button>
+          <button id="try" class='deleteDep'> Cancel </button>
         </td>
     </tr>
 </table>

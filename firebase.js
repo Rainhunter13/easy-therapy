@@ -61,14 +61,16 @@ function show(month, year,day) {
               var cell = document.createElement("td");
               var cellText = document.createTextNode(date);
               if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
-                  cell.classList.add("bg-info");
+                  //cell.classList.add("bg-info");
               } // color today's date
               cell.appendChild(cellText);
               row.appendChild(cell);
               if (day===date){
                 cell.style.color="white";
+                cell.style.border="3px";
                 cell.style.fontWeight="bold";
                 cell.bgColor = '#43a5fc';
+                cell.innerHTML="10 " + ' <i class="fas fa-clock"></i>';
               }
               date++;
           }
@@ -228,7 +230,7 @@ jump();
                 var cell = document.createElement("td");
                 var cellText = document.createTextNode(date);
                 if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
-                    cell.classList.add("bg-info");
+                    
                 } // color today's date
                 cell.appendChild(cellText);
                 row.appendChild(cell);
