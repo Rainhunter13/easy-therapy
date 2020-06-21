@@ -62,12 +62,6 @@ $("#experience").on("keydown", function (e) {
   }
 });
 
-family.onclick = function () {
-  family.checked = true;
-  children.checked = false;
-  stress.checked = false;
-  career.checked = false;
-};
 
 $("#dialog2").dialog({modal: true, bgiframe: true, autoOpen: false, title: 'Share',  buttons: { "Ok": function() { $(this).dialog("close"); } }, closeOnEscape: false});
 
