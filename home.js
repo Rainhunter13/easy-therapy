@@ -45,7 +45,7 @@ async function update() {
       var f2 = fPrice==="Max. Price" || parseInt(fPrice)>=parseInt(data[key]["description"]["price"]);
       var f3 = parseInt(fAgeMin)<=parseInt(data[key]["info"]["age"]) && parseInt(fAgeMax)>=parseInt(data[key]["info"]["age"]);
       var f4 = parseInt(fRating)<=parseInt(data[key]["info"]["rating"]);
-      var f5 = fName==="" || fName===key;
+      var f5 = fName==="" || key.toLowerCase().includes(fName.toLowerCase());
 
       if (f1 && f2 && f3 && f4 && f5) {
         var r = tbl.insertRow(sz);
@@ -78,7 +78,7 @@ async function update() {
           if ($(this).hasClass("selected")) {
             $(this).removeClass("selected");
             this.style.border = "0px";
-            map.src = url + "Daejeon" + params + "13";
+            map.src = url + "Daejeon" + params + "14";
           }
           else {
             var address = data[key]["address"]["lan"] + "," + data[key]["address"]["lat"];
@@ -218,5 +218,29 @@ $( document ).ready(function() {
     update();
   };
 
+  document.getElementById("search_input").addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      search_icon.click();
+    }
+  });
+
+  // FILTERS RESET
+  document.getElementById("reset").onclick = function () {
+    specialization.value = "Specialization";
+    price.value = "Max. Price";
+    age.value = "Age";
+    rating.value = "Min. Rating";
+    rating.style.paddingBottom = "2px";
+    rating.style.fontSize = "25px";
+    document.getElementById("search_input").value = "";
+    fSpecialization = "Specialization";
+    fPrice = "Max. Price";
+    fAgeMin = "0";
+    fAgeMax = "100";
+    fRating = "1";
+    fName = "";
+    update();
+  }
 
 });

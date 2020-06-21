@@ -122,6 +122,18 @@ body {
     color: gray;
 }
 
+/*reset*/
+.reset {
+    position: relative;
+    left: 520px;
+    top: 25px;
+    text-decoration: underline;
+    font-size: 15px;
+    color: darkslategray;
+    cursor: pointer;
+}
+
+
 /*map*/
 .map {
     z-index: 0;
