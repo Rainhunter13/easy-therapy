@@ -2,6 +2,7 @@
 
 This GitHub repository is a design project of KAIST CS374 students (Team Heat) : Spring 2020
 
+Website url: https://dp4heat.web.app/home.html
 
 The web-site consists of **four** main web-pages (Home, Register, Share, Appointments) and some additional/supplementary pages 
 Web pages are named accordingly and their CSS and JavaScript documents are named identically.
